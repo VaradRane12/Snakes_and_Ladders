@@ -12,10 +12,11 @@ int snake_condition(int p1)
 
             for(int a2 = 0; length1>a2; a2++)
             {
-                if(arr[a1][a2] == i)        //checking for if the array consists of the number 
+                if(snakes[a1][0] == p1)        //checking for if the array consists of the number 
                 {
-                    return a1+1;        //returning hte number +1 to look good
+                    return snakes[a1][a2];        //returning hte number +1 to look good
                 }
             }
     }
+    return 0;
 }

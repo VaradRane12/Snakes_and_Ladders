@@ -14,6 +14,10 @@ int move_P1(int p1, int p2){
 
 
     //perhaps add a if condition to tell you've fallen
-    p1 = snake_condition(p1);
+    if(snake_condition(p1))
+    {
+        p1 = snake_condition(p1);
+    }
+    
 
 }
