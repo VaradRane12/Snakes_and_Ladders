@@ -1,7 +1,4 @@
-int snakes[6][2] = {{36,6},{48, 26},{62,18},{88,24},{95,56},{99,78}};
-int ladder[6][2] = {{4,40},{7, 15},{27,54},{30,77},{71,92},{89,98}};
-
-int snake_condition(int p1)
+int snake_condition(int p1,int snakes[6][2],int ladder[6][2])
 {
      int length = 6;     //lenght of the 1st dimension of the 2d array
     // printf("1st %d",length);
@@ -14,7 +11,7 @@ int snake_condition(int p1)
             {
                 if(snakes[a1][0] == p1)        //checking for if the array consists of the number 
                 {
-                    return snakes[a1][a2];        //returning hte number +1 to look good
+                    return snakes[a1][1];      
                 }
             }
     }

@@ -73,7 +73,18 @@ void display(int place1,int place2,int snakes[6][2],int ladder[6][2]){
                 // printf("%d\n",j);
                 for (j = i-9;j<=i;j++){     //inner for loop to print every odd count of 10 decimals
                    
-                    if(check_snake(j,snakes))   //checks if a snake exists in the specfic j
+                    if (j == place1)        //checking for wehre player 1 is 
+                    {
+                        playerpos1(j);
+                        continue;
+                    }
+                    
+                    else if (j == place2)        //checking for wehre player 2 is 
+                    {
+                        playerpos2(j);
+                        continue;
+                    }
+                    else if(check_snake(j,snakes))   //checks if a snake exists in the specfic j
                     {
                         printf("\033[0;33m");   //yellow color
                         printf(" S%d ",check_snake(j,snakes));  //printing snake number
@@ -81,27 +92,17 @@ void display(int place1,int place2,int snakes[6][2],int ladder[6][2]){
                         continue;
                     } 
 
-                    if(check_ladder(j,ladder))   //checking if a ladder exists 
+                    else if(check_ladder(j,ladder))   //checking if a ladder exists 
                     {
                         printf("\e[0;35m");   
                         printf(" L%d ",check_ladder(j,ladder));
                         printf("\033[0m"); 
-                        continue;
+                        continue;    
 
                     } 
 
 
-                    if (j == place1)        //checking for wehre player 1 is 
-                    {
-                        playerpos1(j);
-                        continue;
-                    }
                     
-                    if (j == place2)        //checking for wehre player 2 is 
-                    {
-                        playerpos2(j);
-                        continue;
-                    }
 
 
                     printf(" %d ",j);
@@ -114,7 +115,19 @@ void display(int place1,int place2,int snakes[6][2],int ladder[6][2]){
                     
                     continue;
                 }
-            if(check_snake(i,snakes))   //checking if a snake exists 
+            if (i == place1)       //checking if i is player 1
+            {
+                playerpos1(i);
+                
+            }
+
+
+            else if (i == place2)       //checking if i is player 2
+            {
+                playerpos2(i);
+                
+            }
+            else if(check_snake(i,snakes))   //checking if a snake exists 
             {
                 printf("\033[0;33m");   
                 printf(" S%d ",check_snake(i,snakes));
@@ -130,20 +143,6 @@ void display(int place1,int place2,int snakes[6][2],int ladder[6][2]){
                 printf("\033[0m"); 
 
             } 
-
-
-            else if (i == place1)       //checking if i is player 1
-            {
-                playerpos1(i);
-                
-            }
-
-
-            else if (i == place2)       //checking if i is player 2
-            {
-                playerpos2(i);
-                
-            }
             else {
                 printf(" %d ",i);}      // else printing the outer series
     i--;
