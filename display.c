@@ -9,6 +9,14 @@ int playerpos2(){
     printf(" p2 ");
     printf("\033[0m"); 
 }
+int playerpos12(){
+    printf("\033[0;31m");
+    printf(" p1 ");     //red color for p1
+    printf("\033[0m");
+    printf("\033[0;32m");       //green color for p2
+    printf("/p2 ");
+    printf("\033[0m");  
+}
 int check_snake(int i,int arr[6][2]){
     int length = 6;     //lenght of the 1st dimension of the 2d array
     // printf("1st %d",length);
@@ -73,7 +81,12 @@ void display(int place1,int place2,int snakes[6][2],int ladder[6][2]){
                 // printf("%d\n",j);
                 for (j = i-9;j<=i;j++){     //inner for loop to print every odd count of 10 decimals
                    
-                    if (j == place1)        //checking for wehre player 1 is 
+                    if (j == place1 & j == place2)        //checking for wehre player 1 is 
+                    {
+                        playerpos12(j);
+                        continue;
+                    }
+                    else if (j == place1)        //checking for wehre player 1 is 
                     {
                         playerpos1(j);
                         continue;
@@ -115,7 +128,13 @@ void display(int place1,int place2,int snakes[6][2],int ladder[6][2]){
                     
                     continue;
                 }
-            if (i == place1)       //checking if i is player 1
+            
+            if (i == place1 & i == place2)        //checking for wehre player 1 is 
+                {
+                    playerpos12(i);
+                    continue;
+                }
+            else if (i == place1)       //checking if i is player 1
             {
                 playerpos1(i);
                 
