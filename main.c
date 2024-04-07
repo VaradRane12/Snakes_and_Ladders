@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include<time.h>
+#include<windows.h>
 #include "display.c"
 #include "randomizer.c"
 #include "snake_ladder_check.c"
@@ -67,6 +68,9 @@ int main(){
     {
     p1  = move_P1(p1,p2,snakes,ladder,chr);
     display(p1,p2,snakes,ladder);
+    printf("Enter to Continue");
+    getchar();
+    system("cls");
     if(p1>=100)
     {
         printf("Congratulations %s Has WON!!!!!!!!",chr);
@@ -75,6 +79,9 @@ int main(){
     // printf("\n\n\n\n\n\n\n\n");
     p2  = move_P2(p1,p2,snakes,ladder,chr1);
     display(p1,p2,snakes,ladder);
+    printf("Enter to Continue");
+    getchar();
+    system("cls");
      if(p2>=100)
     {
         printf("Congratulations %s Has WON!!!!!!!!",chr1);
