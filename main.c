@@ -13,8 +13,6 @@ int move_P1(int p1, int p2,int snakes[6][2],int ladder[6][2],char chr[]){
     printf("You've pulled a :%d",dice);
     printf("\n");
     p1 = p1 + dice;
-
-
     //perhaps add a if condition to tell you've fallen
     if(snake_condition(p1,snakes,ladder))
     {
@@ -38,7 +36,6 @@ int move_P2(int p1, int p2,int snakes[6][2],int ladder[6][2],char chr[]){
     printf("You've pulled a :%d",dice);
     printf("\n");
     p2 = p2 + dice;
-
 
     //perhaps add a if condition to tell you've fallen
     if(snake_condition(p2,snakes,ladder))
@@ -70,9 +67,19 @@ int main(){
     {
     p1  = move_P1(p1,p2,snakes,ladder,chr);
     display(p1,p2,snakes,ladder);
+    if(p1>=100)
+    {
+        printf("Congratulations %s Has WON!!!!!!!!",chr);
+        break;
+    }
     // printf("\n\n\n\n\n\n\n\n");
     p2  = move_P2(p1,p2,snakes,ladder,chr1);
     display(p1,p2,snakes,ladder);
+     if(p2>=100)
+    {
+        printf("Congratulations %s Has WON!!!!!!!!",chr1);
+        break;
+    }
     // printf("\n\n\n\n\n\n\n\n");
     }
     
