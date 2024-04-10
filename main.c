@@ -9,7 +9,7 @@ int move_P1(int p1, int p2,int snakes[6][2],int ladder[6][2],char chr[]){
     int dice = random();
     printf("\nThe Current Board, %s is to Move\n",chr);
     display(p1,p2,snakes,ladder);
-    printf("\nPress Any key to draw for %s\n",chr);
+    printf("\nPress Any key to Roll for %s\n",chr);
     getchar();
     printf("You've pulled a :%d",dice);
     printf("\n");
@@ -32,7 +32,7 @@ int move_P2(int p1, int p2,int snakes[6][2],int ladder[6][2],char chr[]){
     int dice = random();
     printf("\nThe Current Board, %s is to Move\n",chr);
     display(p1,p2,snakes,ladder);
-     printf("\nPress Any key to draw for %s\n",chr);
+     printf("\nPress Any key to Roll for %s\n",chr);
     getchar();
     printf("You've pulled a :%d",dice);
     printf("\n");
