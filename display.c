@@ -99,7 +99,7 @@ void display(int place1,int place2,int snakes[6][2],int ladder[6][2]){
                     }
                     else if(check_snake(j,snakes))   //checks if a snake exists in the specfic j
                     {
-                        printf("\033[0;33m");   //yellow color
+                        printf("\033[0;34m");   //yellow color
                         printf(" S%d ",check_snake(j,snakes));  //printing snake number
                         printf("\033[0m"); 
                         continue;
@@ -148,7 +148,7 @@ void display(int place1,int place2,int snakes[6][2],int ladder[6][2]){
             }
             else if(check_snake(i,snakes))   //checking if a snake exists 
             {
-                printf("\033[0;33m");   
+                printf("\033[0;34m");   
                 printf(" S%d ",check_snake(i,snakes));
                 printf("\033[0m"); 
 
